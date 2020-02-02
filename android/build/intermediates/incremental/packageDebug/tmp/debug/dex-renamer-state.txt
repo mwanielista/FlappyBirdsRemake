@@ -1,0 +1,4 @@
+#Sun Feb 02 20:13:47 CET 2020
+base.0=/Users/mwanielista/Desktop/flappy_birds/android/build/intermediates/dex/debug/mergeDexDebug/out
+path.0=classes.dex
+renamed.0=classes.dex
