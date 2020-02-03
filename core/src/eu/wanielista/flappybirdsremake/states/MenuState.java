@@ -2,6 +2,7 @@ package eu.wanielista.flappybirdsremake.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
@@ -9,13 +10,17 @@ import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
 public class MenuState extends State{
 
     private Texture background;
+    private Texture logo;
     private Texture playButton;
+
 
     public MenuState(GameStateManager gameStateManager) {
         super(gameStateManager);
         cam.setToOrtho(false, FlappyBirdsRemake.WIDTH / 2, FlappyBirdsRemake.HEIGHT / 2);
         background = new Texture("bg.png");
+        logo = new Texture("logo.png");
         playButton = new Texture("playbtn.png");
+
     }
 
     @Override
@@ -34,10 +39,9 @@ public class MenuState extends State{
     public void render(SpriteBatch sb) {
         sb.setProjectionMatrix(cam.combined);
         sb.begin();
-//        sb.draw(background, 0, 0, FlappyBirdsRemake.WIDTH, FlappyBirdsRemake.HEIGHT);
         sb.draw(background, 0, 0);
-//        sb.draw(playButton, (FlappyBirdsRemake.WIDTH / 2) - (playButton.getWidth() / 2), FlappyBirdsRemake.HEIGHT / 2);
         sb.draw(playButton, cam.position.x - playButton.getWidth() / 2, cam.position.y);
+        sb.draw(logo, (cam.position.x - playButton.getWidth() / 2)-45, cam.position.y+90);
         sb.end();
     }
 

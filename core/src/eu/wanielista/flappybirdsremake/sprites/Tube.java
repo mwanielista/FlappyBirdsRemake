@@ -18,8 +18,11 @@ public class Tube {
     private static final int TUBE_GAP = 100; //differents between 2 opened cubes, space for bird
 
     private Vector2 positionTopTube, positionBottomTube;
-    private Rectangle boundsTop, boundsBottom;
+    private Rectangle boundsTop, boundsBottom, boundsIn;
     private Random rand;
+
+    private boolean isScored;
+
 
     public Tube(float x) {
         topTube = new Texture("toptube.png");
@@ -31,8 +34,10 @@ public class Tube {
 
         boundsTop =  new Rectangle(positionTopTube.x, positionTopTube.y, topTube.getWidth(), topTube.getHeight());
         boundsBottom = new Rectangle(positionBottomTube.x, positionBottomTube.y, bottomTube.getWidth(), bottomTube.getHeight());
-
+        boundsIn = new Rectangle(positionBottomTube.x + topTube.getWidth(), positionBottomTube.y + bottomTube.getHeight(), 50, TUBE_GAP);
+        isScored = false;
     }
+
 
     public Texture getTopTube() {
         return topTube;
@@ -54,10 +59,24 @@ public class Tube {
         positionBottomTube.set(x, positionTopTube.y - TUBE_GAP - bottomTube.getHeight());
         boundsTop.setPosition(positionTopTube.x, positionTopTube.y);
         boundsBottom.setPosition(positionBottomTube.x, positionBottomTube.y);
+        boundsIn.setPosition(x + topTube.getWidth(), positionBottomTube.y + boundsBottom.getHeight());
+        isScored = false;
     }
 
-    public Boolean collides(Rectangle player) {
+    public boolean score(Rectangle player) {
+        return player.overlaps(boundsIn);
+    }
+
+    public boolean collides(Rectangle player) {
         return player.overlaps(boundsTop) || player.overlaps(boundsBottom);
+    }
+
+    public void markScored() {
+        isScored = true;
+    }
+
+    public boolean isScored() {
+        return isScored;
     }
 
     public void dispose() {

@@ -1,13 +1,19 @@
 package eu.wanielista.flappybirdsremake.states;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
 import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
 import eu.wanielista.flappybirdsremake.sprites.Bird;
+import eu.wanielista.flappybirdsremake.sprites.Font;
+import eu.wanielista.flappybirdsremake.sprites.Scoring;
 import eu.wanielista.flappybirdsremake.sprites.Tube;
 
 public class PlayState extends State {
@@ -19,7 +25,12 @@ public class PlayState extends State {
     private Texture background;
     private Texture ground;
     private Vector2 groundPos1, groundPos2;
+    private Tube tube;
 
+    //scores
+    private BitmapFont scoreFont;
+    private Scoring scoring;
+    public static int score_count;
 
     private Array<Tube> tubes;
 
@@ -32,10 +43,17 @@ public class PlayState extends State {
         groundPos1 = new Vector2(cam.position.x - cam.viewportWidth / 2, GROUND_Y_OFFSET);
         groundPos2 = new Vector2((cam.position.x - cam.viewportWidth / 2) + ground.getWidth(), GROUND_Y_OFFSET);
 
+        scoring = new Scoring();
+        Font font = new Font();
+        scoreFont = font.getBitmap();
+        font.setColor(Color.GOLD);
+        font.setSize(Font.SIZE_BIG);
+
         tubes = new Array<Tube>();
         for(int i = 1; i <= TUBE_COUNT; i++) {
             tubes.add(new Tube(i * (TUBE_SPACING + Tube.TUBE_WIDTH)));
         }
+
     }
 
     @Override
@@ -44,6 +62,7 @@ public class PlayState extends State {
             bird.jump();
         }
     }
+
 
     @Override
     public void update(float dt) {
@@ -57,13 +76,23 @@ public class PlayState extends State {
             if(cam.position.x - (cam.viewportWidth / 2) > tube.getPositionTopTube().x + tube.getTopTube().getWidth()){
                 tube.reposition(tube.getPositionTopTube().x + ((Tube.TUBE_WIDTH + TUBE_SPACING) * TUBE_COUNT));
             }
-
             if(tube.collides(bird.getBounds())){
-                gameStateManager.set(new PlayState(gameStateManager));
+                setscore(scoring.getScore());
+                System.out.println("Sc: " +getScore());
+                gameStateManager.set(new GameOverState(gameStateManager));
+            }
+
+            if(tube.score(bird.getBounds()) && ! tube.isScored()) {
+                scoring.score();
+                tube.markScored();
             }
         }
+
+
         if(bird.getPosition().y <= ground.getHeight() + GROUND_Y_OFFSET){
-            gameStateManager.set(new PlayState(gameStateManager));
+            setscore(scoring.getScore());
+            System.out.println("Sc: " + getScore());
+            gameStateManager.set(new GameOverState(gameStateManager));
         }
         cam.update();
     }
@@ -80,6 +109,8 @@ public class PlayState extends State {
         }
         sb.draw(ground, groundPos1.x, groundPos1.y);
         sb.draw(ground, groundPos2.x, groundPos2.y);
+
+        scoreFont.draw(sb, "Score: " + Integer.toString(scoring.getScore()), cam.position.x - cam.viewportWidth/2 + 10, 20);
         sb.end();
     }
 
@@ -88,6 +119,7 @@ public class PlayState extends State {
         background.dispose();
         bird.dispose();
         ground.dispose();
+        scoreFont.dispose();
         for(Tube tube: tubes){
             tube.dispose();
         }
@@ -104,4 +136,14 @@ public class PlayState extends State {
         }
 
     }
+    private void setscore(int sc)
+    {
+        score_count = sc; // Assigning a value;
+    }
+
+    public static int getScore()
+    {
+        return score_count;
+    }
+
 }

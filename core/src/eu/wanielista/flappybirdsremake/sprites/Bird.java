@@ -19,6 +19,7 @@ public class Bird {
     private Texture bird;
     Texture texture;
     private Sound flap;
+    public float bird_x;
 
     public Bird(int x, int y){
         position = new Vector3(x, y, 0);
@@ -36,6 +37,7 @@ public class Bird {
         }
         velocity.scl(dt);
         position.add(MOVEMENT * dt, velocity.y, 0);
+        bird_x = (MOVEMENT * dt);   //bird x coord
         if(position.y < 0) {
             position.y = 0;
         }
