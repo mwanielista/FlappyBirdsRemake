@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="814fee83-7939-4fcb-8b59-50f315ad77dc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/android/assets/font.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/assets/game_over.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/assets/record.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/android/assets/score.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Font.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Pref.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Scoring.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/GameOverState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/InfoState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/external_libs_dex/debug/mergeExtDexDebug/out/classes.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/tSJc9zP3Ktynmiw9NRcY6oDvY0M=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/tmp/debug/file-input-save-data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/+wUH5r8qxeD70NWixd2hJt8efO8=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/B4SV3eTSevnA3oCllQmbTr7zGAA=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-anydpi-v26_ic_launcher.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-anydpi-v26_ic_launcher.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-anydpi-v26_ic_launcher_foreground.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-anydpi-v26_ic_launcher_foreground.xml.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_launcher.png.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/android/build/intermediates/transforms/dexBuilder/debug/__content__.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/eu/wanielista/flappybirdsremake/sprites/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/eu/wanielista/flappybirdsremake/sprites/Bird.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/build/classes/java/main/eu/wanielista/flappybirdsremake/sprites/Tube.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/build/classes/java/main/eu/wanielista/flappybirdsremake/sprites/Tube.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core.iml" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Tube.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/sprites/Tube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/MenuState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/PlayState.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/PlayState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/build/libs/desktop-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/build/libs/desktop-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/desktop/desktop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/desktop/desktop.iml" afterDir="false" />
-    </list>
+    <list default="true" id="814fee83-7939-4fcb-8b59-50f315ad77dc" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +11,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="nb6hpjmb5lf64dyt" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -88,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/GameOverState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
+            <state relative-caret-position="721">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
@@ -353,7 +308,7 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.32982087" />
+      <window_info anchor="bottom" id="Run" order="0" weight="0.32982087" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
@@ -509,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/eu/wanielista/flappybirdsremake/states/GameOverState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="71" column="49" selection-start-line="71" selection-start-column="49" selection-end-line="71" selection-end-column="49" />
+        <state relative-caret-position="721">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
         </state>
       </provider>
     </entry>
