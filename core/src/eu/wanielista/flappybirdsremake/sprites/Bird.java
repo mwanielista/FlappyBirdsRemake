@@ -10,24 +10,26 @@ import com.badlogic.gdx.math.Vector3;
 public class Bird {
 
     private static final int GRAVITY = -15;
-    private static final int MOVEMENT = 100;
+
+    private int movement = 100;
     private Vector3 position;
     private Vector3 velocity;
     private Rectangle bounds;
     private Animation birdAnim;
 
-    private Texture bird;
     Texture texture;
     private Sound flap;
     public float bird_x;
 
-    public Bird(int x, int y){
+    public Bird(int x, int y) {
+
         position = new Vector3(x, y, 0);
         velocity = new Vector3(0, 0, 0);
         texture = new Texture("birdanimation.png");
         birdAnim = new Animation(new TextureRegion(texture), 3, 0.5f);
         bounds = new Rectangle(x, y, texture.getWidth() / 3, texture.getHeight());
         flap = Gdx.audio.newSound(Gdx.files.internal("sfx_wing.ogg"));
+
     }
 
     public void update(float dt) {
@@ -36,8 +38,9 @@ public class Bird {
             velocity.add(0, GRAVITY, 0);
         }
         velocity.scl(dt);
-        position.add(MOVEMENT * dt, velocity.y, 0);
-        bird_x = (MOVEMENT * dt);   //bird x coord
+
+        position.add(movement* dt, velocity.y, 0);
+        bird_x = (movement * dt);   //bird x coord
         if(position.y < 0) {
             position.y = 0;
         }
@@ -57,6 +60,7 @@ public class Bird {
         velocity.y = 250;
         flap.play();
         flap.play(0.3f);
+
     }
 
     public Rectangle getBounds() {
@@ -67,4 +71,9 @@ public class Bird {
         texture.dispose();
         flap.dispose();
     }
+
+    public void updateMovement() {
+        movement += 10;
+    }
+
 }

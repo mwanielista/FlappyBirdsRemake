@@ -1,11 +1,9 @@
 package eu.wanielista.flappybirdsremake.states;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -36,6 +34,7 @@ public class PlayState extends State {
 
     public PlayState(GameStateManager gameStateManager) {
         super(gameStateManager);
+
         bird = new Bird(50, 300);
         cam.setToOrtho(false, FlappyBirdsRemake.WIDTH / 2, FlappyBirdsRemake.HEIGHT / 2);
         background = new Texture("bg.png");
@@ -48,6 +47,7 @@ public class PlayState extends State {
         scoreFont = font.getBitmap();
         font.setColor(Color.GOLD);
         font.setSize(Font.SIZE_BIG);
+
 
         tubes = new Array<Tube>();
         for(int i = 1; i <= TUBE_COUNT; i++) {
@@ -85,14 +85,18 @@ public class PlayState extends State {
             if(tube.score(bird.getBounds()) && ! tube.isScored()) {
                 scoring.score();
                 tube.markScored();
+                bird.updateMovement();
             }
         }
 
 
         if(bird.getPosition().y <= ground.getHeight() + GROUND_Y_OFFSET){
+
             setscore(scoring.getScore());
+
             System.out.println("Sc: " + getScore());
             gameStateManager.set(new GameOverState(gameStateManager));
+
         }
         cam.update();
     }

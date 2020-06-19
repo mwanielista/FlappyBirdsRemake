@@ -8,18 +8,23 @@ public class Scoring {
 
     private Sound scoreSound;
     private int score;
-    private int step = 5;
+    private int step = 1;
     private Pref pref;
+
+    private int acceleration = 1;
 
 
     public Scoring() {
         scoreSound = Gdx.audio.newSound(Gdx.files.internal("score.wav"));
         pref = new Pref();
+
+        acceleration += 2;
     }
 
     public void score() {
         scoreSound.play(0.3f);
         score += step;
+
     }
 
 
