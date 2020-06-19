@@ -1,4 +1,4 @@
-#Mon Feb 03 18:41:50 CET 2020
-base.0=/Users/mwanielista/Documents/flappy_birds_app/android/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Fri Jun 19 22:57:03 CEST 2020
+base.0=/Users/mwanielista/AndroidStudioProjects/FlappyBirdsRemake/android/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
