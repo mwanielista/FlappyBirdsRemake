@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FlappyBirdsRemake.iml" filepath="$PROJECT_DIR$/FlappyBirdsRemake.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android/FlappyBirdsRemake.android.iml" filepath="$PROJECT_DIR$/.idea/modules/android/FlappyBirdsRemake.android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/FlappyBirdsRemake.core.iml" filepath="$PROJECT_DIR$/.idea/modules/core/FlappyBirdsRemake.core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/desktop/FlappyBirdsRemake.desktop.iml" filepath="$PROJECT_DIR$/.idea/modules/desktop/FlappyBirdsRemake.desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FlappyBirdsRemake.iml" filepath="$PROJECT_DIR$/FlappyBirdsRemake.iml" group="FlappyBirdsRemake" />
+      <module fileurl="file://$PROJECT_DIR$/android/android.iml" filepath="$PROJECT_DIR$/android/android.iml" group="FlappyBirdsRemake/android" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" group="FlappyBirdsRemake/core" />
+      <module fileurl="file://$PROJECT_DIR$/desktop/desktop.iml" filepath="$PROJECT_DIR$/desktop/desktop.iml" group="FlappyBirdsRemake/desktop" />
+      <module fileurl="file://$PROJECT_DIR$/flappy_birds_app.iml" filepath="$PROJECT_DIR$/flappy_birds_app.iml" />
     </modules>
   </component>
 </project>

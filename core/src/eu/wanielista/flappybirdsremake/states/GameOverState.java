@@ -5,10 +5,12 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import eu.wanielista.flappybirdsremake.FlyingBirds;
+import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
 import eu.wanielista.flappybirdsremake.sprites.Font;
+import eu.wanielista.flappybirdsremake.sprites.Scoring;
 
 public class GameOverState extends State{
 
@@ -21,7 +23,7 @@ public class GameOverState extends State{
 
     public GameOverState(GameStateManager gameStateManager) {
         super(gameStateManager);
-        cam.setToOrtho(false, FlyingBirds.WIDTH / 2, FlyingBirds.HEIGHT / 2);
+        cam.setToOrtho(false, FlappyBirdsRemake.WIDTH / 2, FlappyBirdsRemake.HEIGHT / 2);
         background = new Texture("bg.png");
         gameOver = new Texture("gameover.png");
         playButton = new Texture("playbtn.png");

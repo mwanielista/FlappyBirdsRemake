@@ -2,9 +2,10 @@ package eu.wanielista.flappybirdsremake.states;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import eu.wanielista.flappybirdsremake.FlyingBirds;
+import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
 
 public class MenuState extends State{
 
@@ -15,7 +16,7 @@ public class MenuState extends State{
 
     public MenuState(GameStateManager gameStateManager) {
         super(gameStateManager);
-        cam.setToOrtho(false, FlyingBirds.WIDTH / 2, FlyingBirds.HEIGHT / 2);
+        cam.setToOrtho(false, FlappyBirdsRemake.WIDTH / 2, FlappyBirdsRemake.HEIGHT / 2);
         background = new Texture("bg.png");
         logo = new Texture("logo.png");
         playButton = new Texture("playbtn.png");

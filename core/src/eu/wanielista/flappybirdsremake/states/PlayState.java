@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
-import eu.wanielista.flappybirdsremake.FlyingBirds;
+import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
 import eu.wanielista.flappybirdsremake.sprites.Bird;
 import eu.wanielista.flappybirdsremake.sprites.Font;
 import eu.wanielista.flappybirdsremake.sprites.Scoring;
@@ -36,7 +36,7 @@ public class PlayState extends State {
         super(gameStateManager);
 
         bird = new Bird(50, 300);
-        cam.setToOrtho(false, FlyingBirds.WIDTH / 2, FlyingBirds.HEIGHT / 2);
+        cam.setToOrtho(false, FlappyBirdsRemake.WIDTH / 2, FlappyBirdsRemake.HEIGHT / 2);
         background = new Texture("bg.png");
         ground = new Texture("ground.png");
         groundPos1 = new Vector2(cam.position.x - cam.viewportWidth / 2, GROUND_Y_OFFSET);

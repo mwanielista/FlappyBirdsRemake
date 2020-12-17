@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import eu.wanielista.flappybirdsremake.states.GameStateManager;
 import eu.wanielista.flappybirdsremake.states.MenuState;
 
-public class FlyingBirds extends ApplicationAdapter {
+public class FlappyBirdsRemake extends ApplicationAdapter {
 	public static final int WIDTH = 480;
 	public static final int HEIGHT = 800;
 
@@ -46,6 +46,8 @@ public class FlyingBirds extends ApplicationAdapter {
 	
 	@Override
 	public void dispose () {
+//		batch.dispose();
+//		img.dispose();
 		super.dispose();
 		music.dispose();
 	}
