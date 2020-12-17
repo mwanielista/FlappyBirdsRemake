@@ -7,7 +7,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
-import eu.wanielista.flappybirdsremake.FlappyBirdsRemake;
+import eu.wanielista.flappybirdsremake.FlyingBirds;
 import eu.wanielista.flappybirdsremake.sprites.Font;
 import eu.wanielista.flappybirdsremake.sprites.Scoring;
 
@@ -23,7 +23,7 @@ public class InfoState extends State{
     public InfoState(GameStateManager gameStateManager) {
         super(gameStateManager);
         this.scoring = scoring;
-        cam.setToOrtho(false, FlappyBirdsRemake.WIDTH/2, FlappyBirdsRemake.HEIGHT/2);
+        cam.setToOrtho(false, FlyingBirds.WIDTH/2, FlyingBirds.HEIGHT/2);
         background = new Texture("bg.png");
 
         Font font = new Font();
