@@ -8,7 +8,7 @@ The player takes on the role of a flying bird. The main purpose is to avoid pipe
 This game was written with the use of Java and LibGDX. 
 
 ## Screenshoot
-[Screenshoot](flying.png)
+![Screenshoot](/flying.png)
 
 ## Download App
 If you would like to test my app, You can download it from Google Play Store.
